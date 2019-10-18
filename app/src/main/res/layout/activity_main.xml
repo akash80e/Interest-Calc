@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/investment"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
         />
     <EditText
         android:id="@+id/input_investment"
@@ -20,7 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/investment"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
 
     <TextView
         android:id="@+id/payment"
@@ -28,7 +30,8 @@
         android:layout_height="wrap_content"
         android:text="@string/payment"
         android:layout_below="@+id/input_investment"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
     <LinearLayout
         android:id="@+id/layout_payment"
         android:layout_width="wrap_content"
@@ -38,12 +41,14 @@
         <EditText
             android:id="@+id/input_payment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
         <Spinner
             android:id="@+id/spinner_freq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/frequency"
+            android:layout_margin="10dp"
             />
     </LinearLayout>
     <TextView
@@ -52,7 +57,8 @@
         android:layout_height="wrap_content"
         android:text="@string/interest"
         android:layout_below="@+id/layout_payment"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
     <EditText
         android:id="@+id/input_rate"
         android:inputType="numberDecimal"
@@ -67,19 +73,26 @@
         android:text="@string/years"
         android:layout_below="@+id/input_rate"
         android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
         />
     <LinearLayout
         android:id="@+id/layout_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/time"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
         <TextView
         android:id="@+id/text_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="time to show" />
+        android:text="time to show"
+        android:layout_margin="10dp"/>
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:max="10"
+            android:progress="1"/>
 
 
     </LinearLayout>
@@ -91,5 +104,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_time"
         android:layout_centerHorizontal="true"
-        android:text="@string/calculate"/>
+        android:text="@string/calculate"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/compound_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+
 </RelativeLayout>
