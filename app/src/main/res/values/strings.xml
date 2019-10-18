@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Interest Calculator</string>
+    <string name="investment">Investment</string>
+    <string name="payment">Payment</string>
+    <string name="interest">Interest</string>
+    <string name="years">Years to Grow</string>
+    <string name="calculate">Calculate</string>
+
+    <string-array name="frequency">
+        <item>monthly</item>
+        <item>quarterly</item>
+        <item>semi-annually</item>
+        <item>annually</item>
+    </string-array>
+</resources>
