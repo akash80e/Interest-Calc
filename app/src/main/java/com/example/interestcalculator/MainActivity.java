@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         //Get investment field value
         String input;
         input = etInvestment.getText().toString();
-        if (input.isEmpty()){
+        if (input.isEmpty() || Double.valueOf(input) == 0){
             calculateActive = false;
             Toast.makeText(getApplicationContext(), "Please input Initial Investment", Toast.LENGTH_SHORT).show();
             return;
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         //get regular payment field value
         input = etPayment.getText().toString();
-        if (input.isEmpty()){
+        if (input.isEmpty() || Double.valueOf(input) == 0){
             calculateActive = false;
             Toast.makeText(getApplicationContext(), "Please input Regular Payment", Toast.LENGTH_SHORT).show();
             return;
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
         //get rate of interest field value
         input = etRate.getText().toString();
-        if (input.isEmpty()){
+        if (input.isEmpty() || Double.valueOf(input) == 0){
             calculateActive = false;
             Toast.makeText(getApplicationContext(), "Please input Annual Interest Rate", Toast.LENGTH_SHORT).show();
             return;
