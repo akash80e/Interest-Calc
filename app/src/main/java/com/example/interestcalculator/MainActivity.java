@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         //Get investment field value
         String input;
         input = etInvestment.getText().toString();
-        if (input.isEmpty() || Double.valueOf(input) == 0){
+        if (input.isEmpty()){
             calculateActive = false;
             Toast.makeText(getApplicationContext(), "Please input Initial Investment", Toast.LENGTH_SHORT).show();
             return;
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         //get regular payment field value
         input = etPayment.getText().toString();
-        if (input.isEmpty() || Double.valueOf(input) == 0){
+        if (input.isEmpty()){
             calculateActive = false;
             Toast.makeText(getApplicationContext(), "Please input Regular Payment", Toast.LENGTH_SHORT).show();
             return;
@@ -136,7 +136,13 @@ public class MainActivity extends AppCompatActivity {
             interest = Double.valueOf(input);
         }
 
-        //gets the time peroid from the seekbar.
+        //check if both investment and payment are zero.
+        if (investment == 0 && payment == 0){
+            calculateActive = false;
+            Toast.makeText(getApplicationContext(), "Both Initial Investment and Regular Payment cannot be zero", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        //gets the time period from the seekbar.
         period = seekbar.getProgress();
 
         //gets the deposit frequency from the spinner
