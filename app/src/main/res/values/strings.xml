@@ -5,11 +5,13 @@
     <string name="interest">Annual Interest Rate</string>
     <string name="years">Years to Grow</string>
     <string name="calculate">CALCULATE</string>
+    <string name="period">%d yrs</string>
+    <string name="result">Compound Interest: %1$s</string>
 
     <string-array name="frequency">
-        <item>monthly</item>
-        <item>quarterly</item>
-        <item>semi-annually</item>
-        <item>annually</item>
+        <item>Yearly</item>
+        <item>Semi-annually</item>
+        <item>Quarterly</item>
+        <item>Monthly</item>
     </string-array>
 </resources>

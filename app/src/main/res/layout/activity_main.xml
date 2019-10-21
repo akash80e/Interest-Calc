@@ -6,7 +6,6 @@
     tools:context=".MainActivity"
     >
 
-
     <TextView
         android:id="@+id/investment"
         android:layout_width="wrap_content"
@@ -18,11 +17,12 @@
     <EditText
         android:id="@+id/input_investment"
         android:inputType="numberDecimal"
-        android:layout_width="wrap_content"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/investment"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:maxLength="10"/>
 
     <TextView
         android:id="@+id/payment"
@@ -38,19 +38,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/payment"
         android:layout_centerHorizontal="true">
+
         <EditText
             android:id="@+id/input_payment"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:inputType="numberDecimal"
+            android:maxLength="10"/>
         <Spinner
             android:id="@+id/spinner_freq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/frequency"
-            android:layout_margin="10dp"
-            />
+            android:layout_margin="10dp" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/interest_rate"
         android:layout_width="wrap_content"
@@ -62,10 +65,11 @@
     <EditText
         android:id="@+id/input_rate"
         android:inputType="numberDecimal"
-        android:layout_width="wrap_content"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/interest_rate"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:maxLength="10"/>
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
@@ -85,7 +89,6 @@
         android:id="@+id/text_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="time to show"
         android:layout_margin="10dp"/>
         <SeekBar
             android:id="@+id/seek_bar"
